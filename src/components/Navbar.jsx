@@ -61,7 +61,7 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
-          <li key="resume" className="text-secondary hover:text-white text-[18px] font-medium cursor-pointer"> <a href="/HwanChinYang.pdf">Resume</a></li>
+          <li key="resume" className="text-secondary hover:text-white text-[18px] font-medium cursor-pointer"> <a href="/assets/HwanChinYang.pdf">Resume</a></li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -92,7 +92,7 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
-              <li className="font-poppins font-medium cursor-pointer text-[16px] text-secondary" key={"resume"}><a href="resume">Resume</a></li>
+              <li className="font-poppins font-medium cursor-pointer text-[16px] text-secondary" key={"resume"}><a href="/assets/HwanChinYang.pdf">Resume</a></li>
             </ul>
           </div>
         </div>
