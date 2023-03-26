@@ -1,25 +1,44 @@
 import { BrowserRouter } from "react-router-dom";
-
+import React, { useEffect, useState } from "react";
 import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
 
 const App = () => {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoading = () => {
+    setIsLoading(false);
+  }
+
+  useEffect(()=>{
+    window.addEventListener("load",handleLoading);
+    return () => window.removeEventListener("load",handleLoading);
+  },[])
+
+  
   return (
-    <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-          <Navbar />
-          <Hero />
+    <>
+      {!isLoading &&
+      <BrowserRouter>
+        <div className='relative z-0 bg-primary'>
+          <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+            <Navbar />
+            <Hero />
+          </div>
+          <About />
+          <Experience />
+          <Tech />
+          <Works />
+          <div className='relative z-0'>
+            <Contact />
+            <StarsCanvas />
+          </div>
         </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <div className='relative z-0'>
-          <Contact />
-          <StarsCanvas />
-        </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter> }
+      {
+        isLoading && <div> Loading </div>
+      }
+    </>
   );
 }
 
