@@ -1,8 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
-
+import React, { lazy, useState, useEffect} from "react";
 import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
 
 const App = () => {
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
     <BrowserRouter>
       <div className='relative z-0 bg-primary'>
@@ -12,7 +17,7 @@ const App = () => {
         </div>
         <About />
         <Experience />
-        <Tech />
+        {isMounted && <Tech /> }
         <Works />
         <div className='relative z-0'>
           <Contact />
