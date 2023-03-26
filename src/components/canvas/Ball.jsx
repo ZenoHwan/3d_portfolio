@@ -1,4 +1,4 @@
-import React, { Suspense , useState, useEffect } from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -45,22 +45,18 @@ const BallCanvas = ({ icon }) => {
 
 
   return (
-    <>
-      {isMounted && 
-      <Canvas
-        frameloop='demand'
-        dpr={[1, 2]}
-        gl={{ preserveDrawingBuffer: true }}
-      >
-        <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls enableZoom={false} />
-          <Ball imgUrl={icon} />
-        </Suspense>
+    <Canvas
+      frameloop='demand'
+      dpr={[1, 2]}
+      gl={{ preserveDrawingBuffer: true }}
+    >
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls enableZoom={false} />
+        <Ball imgUrl={icon} />
+      </Suspense>
 
-        <Preload all />
-      </Canvas>
-      }
-    </>
+      <Preload all />
+    </Canvas>
   );
 };
 
