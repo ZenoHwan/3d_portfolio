@@ -1,4 +1,4 @@
-import React, { lazy ,Suspense,useState, useEffect} from 'react';
+import React, { lazy , useState, useEffect} from 'react';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
