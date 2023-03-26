@@ -14,6 +14,8 @@ import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
+import nextjs from "./tech/nextjs.svg";
+import java from "./tech/java.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
@@ -47,6 +49,8 @@ export {
   html,
   javascript,
   mongodb,
+  nextjs,
+  java,
   nodejs,
   reactjs,
   redux,
