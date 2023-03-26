@@ -1,4 +1,4 @@
-import React, { lazy, useState, useEffect} from "react";
+import React, { lazy } from "react";
 const  BallCanvas  = lazy(() => import('../components/canvas/Ball'));
 
 import { SectionWrapper } from "../hoc";
