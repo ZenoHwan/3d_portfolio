@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import resume from "../assets/HwanChinYang.pdf"
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -49,7 +50,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden sm:flex flex-row gap-10 items-center'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -61,7 +62,7 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
-          <li key="resume" className="text-secondary hover:text-white text-[18px] font-medium cursor-pointer"> <a href="/assets/HwanChinYang.pdf">Resume</a></li>
+          <li key="resume" className="text-[#804dee] hover:text-indigo-400 text-[18px] font-medium cursor-pointer border-4 border-[#804dee] p-2"> <a href={resume}>Resume</a></li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -92,7 +93,7 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
-              <li className="font-poppins font-medium cursor-pointer text-[16px] text-secondary" key={"resume"}><a href="/assets/HwanChinYang.pdf">Resume</a></li>
+              <li className="font-poppins font-medium cursor-pointer text-[16px] text-secondary" key={"resume"}><a href={resume}>Resume</a></li>
             </ul>
           </div>
         </div>
