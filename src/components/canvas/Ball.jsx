@@ -38,12 +38,6 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
-  const [isMounted, setIsMounted] = useState(false);
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-
   return (
     <Canvas
       frameloop='demand'
