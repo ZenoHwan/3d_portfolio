@@ -6,6 +6,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import website from "./website.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -22,14 +23,18 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import python from "./tech/python.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import seagate from "./company/seagate.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import bjak from "./company/bjak.png";
+import anthonyLondon from "./company/anthonyLondon.png";
 
 import carrent from "./carrent.png";
+import idential from "./idential.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
@@ -65,4 +70,9 @@ export {
   carrent,
   jobit,
   tripguide,
+  bjak,
+  python,
+  idential,
+  website,
+  anthonyLondon,
 };
