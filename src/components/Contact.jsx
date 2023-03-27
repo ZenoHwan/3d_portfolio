@@ -31,6 +31,12 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    if(!form.name || !form.email ||form.message){
+      alert("Hi, thank you for reaching out, but one of the field is empty. Please fill up form thanks");
+      setLoading(false);
+      return;
+    }
+
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
