@@ -2,4 +2,4 @@ step to run :
 1. yarn install
 2. yarn run dev
 
-![image](https://user-images.githubusercontent.com/45738247/227756122-ff5c7540-ecd5-43c5-ba1d-0ce318ce5824.png)
+![image](https://user-images.githubusercontent.com/45738247/227824787-ca6a6a7b-a54e-406c-b6fb-311b5f5927ee.png)
