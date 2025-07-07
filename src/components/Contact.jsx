@@ -31,7 +31,7 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    if(!form.name || !form.email ||form.message){
+    if(!form.name || !form.email || !form.message){
       alert("Hi, thank you for reaching out, but one of the field is empty. Please fill up form thanks");
       setLoading(false);
       return;
