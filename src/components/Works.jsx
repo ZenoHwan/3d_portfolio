@@ -1,93 +1,84 @@
 import React from "react";
-import Tilt from "react-tilt";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 import { styles } from "../styles";
-import { github, website } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
-  return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-      >
-        <div className='relative w-full h-[230px]'>
-          <img
-            src={image}
-            alt='project_image'
-            className='w-full h-full object-cover rounded-2xl'
-          />
+const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => (
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.3, 0.75)}
+      className="tui-card tui-card-hover w-full sm:w-[360px] font-mono flex flex-col"
+    >
+      <div className="text-[11px] text-muted p-3 border-b border-border flex items-center justify-between">
+        <span className="flex items-center gap-2">
+          <span className={source_code_link ? "text-accent" : "text-muted"}>●</span>
+          <span>project_{String(index + 1).padStart(2, "0")}.log</span>
+        </span>
+        {source_code_link ? (
+          <a
+            href={source_code_link}
+            target="_blank"
+            rel="noreferrer"
+            className="text-accent hover:text-info text-[11px]"
+          >
+            [visit ↗]
+          </a>
+        ) : (
+          <span className="text-muted text-[11px]">[archived]</span>
+        )}
+      </div>
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div 
-              onClick={() => { if(source_code_link != null)window.open(source_code_link, "_blank") }}
-              className={`violet-gradient w-10 h-10 rounded-full flex justify-center items-center ${source_code_link != null ? "cursor-pointer" : "cursor-not-allowed"}`}
-            >
-              <img
-                src={website}
-                alt='source code'
-                className='w-1/2 h-1/2 object-contain'
-              />
-            </div>
-          </div>
-        </div>
+      <div className="relative w-full h-[200px] overflow-hidden border-b border-border">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent pointer-events-none" />
+      </div>
 
-        <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
-        </div>
-
-        <div className='mt-4 flex flex-wrap gap-2'>
+      <div className="p-5 flex flex-col gap-3 flex-1">
+        <h3 className="text-text font-bold text-[20px]">
+          <span className="text-accent">→</span> {name}
+        </h3>
+        <p className="text-muted text-[13px] leading-[22px]">{description}</p>
+        <div className="mt-auto pt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <p
+            <span
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className="text-[11px] text-accent border border-border px-2 py-1"
             >
-              #{tag.name}
-            </p>
+              {tag.name}
+            </span>
           ))}
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   );
-};
 
 const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <p className={styles.sectionSubText}>// 03_projects</p>
+        <h2 className={`${styles.sectionHeadText} mt-2 font-sans`}>
+          <span className="text-accent">&gt;</span> ls ./projects
+        </h2>
       </motion.div>
 
-      <div className='w-full flex'>
+      <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+          className="mt-4 text-muted text-[15px] max-w-3xl leading-[26px] font-mono"
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. It reflects my ability to solve
-          complex problems, work with different technologies,
-          and manage projects effectively.
+          Shipped work. Real users, real production. Each one solved a specific
+          problem — not portfolio filler.
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
+      <div className="mt-16 flex flex-wrap gap-6">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

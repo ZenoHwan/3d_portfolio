@@ -28,187 +28,108 @@ import {
   python,
   idential,
   anthonyLondon,
+  coinranking,
+  check4d,
 } from "../assets";
 
 export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
+  { id: "about", title: "About" },
+  { id: "work", title: "Work" },
+  { id: "contact", title: "Contact" },
 ];
 
 const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
+  { title: "Frontend", icon: web },
+  { title: "Backend", icon: backend },
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Nextjs",
-    icon: nextjs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "java",
-    icon: java,
-  },
-  {
-    name: "python",
-    icon: python,
-  },
+  { name: "TypeScript", icon: typescript },
+  { name: "JavaScript", icon: javascript },
+  { name: "React", icon: reactjs },
+  { name: "Next.js", icon: nextjs },
+  { name: "Node.js", icon: nodejs },
+  { name: "Tailwind", icon: tailwind },
+  { name: "Redux", icon: redux },
+  { name: "MongoDB", icon: mongodb },
+  { name: "Docker", icon: docker },
+  { name: "Git", icon: git },
+  { name: "Python", icon: python },
+  { name: "Java", icon: java },
+  { name: "HTML5", icon: html },
+  { name: "CSS3", icon: css },
 ];
 
 const experiences = [
   {
-    title: "Full Stack Developer Intern",
-    company_name: "Seagate",
-    icon: seagate,
-    iconBg: "#E6DEDD",
-    date: "Jan 2017 - Jun 2017",
+    title: "Software Engineer",
+    company_name: "Coinranking",
+    icon: coinranking,
+    iconBg: "#0f141a",
+    date: "Jul 2024 - Present",
     points: [
-      "Developing and maintaining web applications using Java, JSP, Servlet and SQL",
-      "Collaborating with cross-functional teams including product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      " Planning and building on access provision module in Seagate web application.",
+      "Full-stack on Coinranking Hub — production crypto market-data platform.",
+      "Microservices, real-time prices, and account/billing systems.",
+      "Node.js · TypeScript · Go · Astro · React · Fastify · Express · MariaDB · Redis · Docker · AWS",
     ],
   },
   {
     title: "Full Stack Developer",
     company_name: "Bjak",
     icon: bjak,
-    iconBg: "#FFFFFF",
-    date: "Aug 2021 - Present",
+    iconBg: "#0f141a",
+    date: "Aug 2021 - Jul 2024",
     points: [
-      "Developing and maintaining web applications using Nextjs, Nodejs, Nestjs, React, Express and MongoDB",
-      "Responsible in handling and improving a wide range of areas: Motor Insurance, Frontend Designs, Backend Designs, Backend Algorithm, API Integrations, Peer Code Review",
-      "Helping to build new product in the company such as Motor Loan",
+      "Shipped motor insurance and motor loan products across Next.js, Node.js, NestJS, React, Express and MongoDB.",
+      "Owned end-to-end features: frontend, backend algorithms, API integrations and peer code review.",
+      "Bootstrapped Motor Loan from zero — architecture, data model, integrations, launch.",
     ],
   },
-];
-
-const testimonials = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    title: "Full Stack Developer Intern",
+    company_name: "Seagate",
+    icon: seagate,
+    iconBg: "#0f141a",
+    date: "Jan 2017 - Jun 2017",
+    points: [
+      "Built and maintained internal web apps with Java, JSP, Servlet and SQL.",
+      "Collaborated with PMs and engineers on the access provision module powering Seagate's internal tooling.",
+      "Delivered responsive UIs and ensured cross-browser compatibility across legacy IE and modern browsers.",
+    ],
   },
 ];
 
 const projects = [
   {
+    name: "Check4DResult",
+    description:
+      "Live 4D results for Magnum, Sports Toto, Da Ma Cai and more. Auto-refresh during draw windows.",
+    tags: [],
+    image: check4d,
+    source_code_link: "https://www.check4dresult.com/",
+  },
+  {
     name: "Idential.xyz",
     description:
-      "Idential is building the infrastructure to issue micro-credentials and make them searchable in a curated & verifiable way.",
+      "Infrastructure for issuing micro-credentials and making them searchable in a curated, verifiable way. Built the platform end-to-end on Next.js and MongoDB. Past project — deprecated.",
     tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "mongodb", color: "green-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
     ],
     image: idential,
-    source_code_link: "https://www.idential.xyz/",
   },
   {
     name: "Anthony's London",
     description:
-      "Anthony’s London is popular menswear in London. This admin site is to help managing orders from clients",
+      "Admin platform for a London menswear brand — order management, inventory and customer ops. Built on Next.js and PostgreSQL. Past project — deprecated.",
     tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "PostgreSQL",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "postgresql", color: "green-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient" },
     ],
     image: anthonyLondon,
-    source_code_link: "https://www.anthonyscollections.com/",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

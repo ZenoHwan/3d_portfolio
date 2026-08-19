@@ -32,9 +32,11 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import bjak from "./company/bjak.png";
 import anthonyLondon from "./company/anthonyLondon.png";
+import coinranking from "./company/coinranking.svg";
 
 import carrent from "./carrent.png";
 import idential from "./idential.png";
+import check4d from "./check4d.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
@@ -73,6 +75,8 @@ export {
   bjak,
   python,
   idential,
+  check4d,
   website,
   anthonyLondon,
+  coinranking,
 };
