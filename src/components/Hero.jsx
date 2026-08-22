@@ -26,9 +26,9 @@ const Hero = () => {
   useEffect(() => setIsMounted(true), []);
 
   return (
-    <section className="relative w-full h-screen mx-auto grid-bg-fine">
+    <section className="relative w-full min-h-[100dvh] mx-auto grid-bg-fine flex flex-col overflow-x-clip">
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col gap-6 z-10`}
+        className={`relative z-10 max-w-7xl mx-auto ${styles.paddingX} flex flex-col gap-5 sm:gap-6 pt-28 pb-8 sm:absolute sm:inset-0 sm:top-[120px] sm:pt-0 sm:pb-0`}
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -62,9 +62,9 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2.5 }}
-            className="mt-6 max-w-2xl"
+            className="mt-6 max-w-2xl text-legible"
           >
-            <p className={`${styles.heroSubText} text-text/80`}>
+            <p className={`${styles.heroSubText} text-text`}>
               <span className="text-accent">→</span> Software engineer.{" "}
               <span className="text-info">Full-stack.</span>{" "}
               Building crypto data products at{" "}
@@ -78,7 +78,7 @@ const Hero = () => {
               </a>
               .
             </p>
-            <p className="mt-3 text-muted text-[14px] sm:text-[16px]">
+            <p className="mt-3 text-text/85 text-[13px] sm:text-[16px] leading-relaxed">
               Node.js · TypeScript · Go · Astro · React · Fastify · Express · MariaDB · Redis · Docker · AWS
             </p>
           </motion.div>
@@ -91,13 +91,13 @@ const Hero = () => {
           >
             <a
               href="#work"
-              className="border border-accent text-accent hover:bg-accent hover:text-primary px-5 py-2.5 text-[14px] font-semibold transition-colors"
+              className="inline-flex min-h-11 items-center border border-accent text-accent hover:bg-accent hover:text-primary px-5 py-2.5 text-[14px] font-semibold transition-colors"
             >
               ./view-work
             </a>
             <a
               href="#contact"
-              className="border border-border text-muted hover:border-accent hover:text-accent px-5 py-2.5 text-[14px] font-semibold transition-colors"
+              className="inline-flex min-h-11 items-center border border-border text-muted hover:border-accent hover:text-accent px-5 py-2.5 text-[14px] font-semibold transition-colors"
             >
               ./contact
             </a>
@@ -105,14 +105,16 @@ const Hero = () => {
         </div>
       </div>
 
-      {isMounted && (
-        <Suspense fallback={null}>
-          <ComputersCanvas />
-        </Suspense>
-      )}
+      <div className="hidden sm:block absolute inset-0">
+        {isMounted && (
+          <Suspense fallback={null}>
+            <ComputersCanvas />
+          </Suspense>
+        )}
+      </div>
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href="#about" className="text-muted text-[12px] font-mono flex flex-col items-center gap-2 hover:text-accent transition-colors">
+      <div className="relative z-10 mt-auto pb-[max(2rem,env(safe-area-inset-bottom))] sm:absolute sm:bottom-10 sm:mt-0 w-full flex justify-center items-center">
+        <a href="#about" className="text-muted text-[12px] font-mono flex flex-col items-center gap-2 min-h-11 justify-center hover:text-accent transition-colors">
           <span>scroll</span>
           <motion.span
             animate={{ y: [0, 8, 0] }}

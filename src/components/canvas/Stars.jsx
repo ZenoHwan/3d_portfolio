@@ -6,7 +6,7 @@ import { inSphere } from "maath/random";
 const Stars = (props) => {
   const ref = useRef();
   const [sphere] = useState(() =>
-    inSphere(new Float32Array(5000), { radius: 1.2 })
+      inSphere(new Float32Array(typeof window !== "undefined" && window.innerWidth < 768 ? 1200 : 5000), { radius: 1.2 })
   );
 
   useFrame((_, delta) => {
@@ -32,7 +32,7 @@ const Stars = (props) => {
 };
 
 const StarsCanvas = () => (
-  <div className="w-full h-auto absolute inset-0 z-[-1]">
+  <div className="hidden md:block w-full h-auto absolute inset-0 z-[-1]">
     <Canvas camera={{ position: [0, 0, 1] }}>
       <Suspense fallback={null}>
         <Stars />

@@ -17,27 +17,37 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = toggle ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [toggle]);
+
   return (
     <nav
-      className={`w-full flex items-center py-4 fixed top-0 z-20 font-mono transition-all duration-200 ${
-        scrolled ? "bg-primary/90 backdrop-blur border-b border-border" : "bg-transparent"
+      className={`w-full flex items-center py-3 sm:py-4 fixed top-0 z-20 font-mono pt-[max(0.75rem,env(safe-area-inset-top))] transition-all duration-200 ${
+        scrolled || toggle ? "bg-primary/90 backdrop-blur border-b border-border" : "bg-transparent"
       }`}
     >
       <div className={`${styles.paddingX} w-full flex justify-between items-center max-w-7xl mx-auto`}>
         <Link
           to="/"
-          className="flex items-center gap-3 group"
+          className="flex items-center gap-2 sm:gap-3 group min-h-11"
           onClick={() => {
             setActive("");
+            setToggle(false);
             window.scrollTo(0, 0);
           }}
         >
           <span className="text-accent text-[18px] font-bold">$</span>
-          <p className="text-text text-[16px] font-semibold cursor-pointer flex items-center">
+          <p className="text-text text-[15px] sm:text-[16px] font-semibold cursor-pointer flex items-center">
             hwan
-            <span className="text-muted mx-1">@</span>
-            <span className="text-info">portfolio</span>
-            <span className="text-muted mx-1">:~$</span>
+            <span className="hidden xs:inline">
+              <span className="text-muted mx-1">@</span>
+              <span className="text-info">portfolio</span>
+              <span className="text-muted mx-1">:~$</span>
+            </span>
             <span className="hidden sm:inline text-accent ml-1">full-stack</span>
           </p>
         </Link>
@@ -64,40 +74,54 @@ const Navbar = () => {
           </a>
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[24px] h-[24px] object-contain cursor-pointer"
+        <div className="sm:hidden flex items-center">
+          <button
+            type="button"
+            aria-expanded={toggle}
+            aria-label={toggle ? "Close menu" : "Open menu"}
+            className="flex min-h-11 min-w-11 items-center justify-center"
             onClick={() => setToggle(!toggle)}
-          />
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-5 bg-surface border border-border absolute top-16 right-4 min-w-[160px] z-10`}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-3">
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.id}
-                  className={`font-mono font-medium cursor-pointer text-[14px] ${
+            <img
+              src={toggle ? close : menu}
+              alt=""
+              className="w-6 h-6 object-contain"
+            />
+          </button>
+        </div>
+      </div>
+      {toggle && (
+        <div className="sm:hidden fixed inset-x-0 top-[calc(env(safe-area-inset-top)+3.25rem)] bottom-0 bg-primary/95 border-t border-border px-6 py-6 z-10">
+          <ul className="list-none flex flex-col gap-1">
+            {navLinks.map((nav) => (
+              <li key={nav.id}>
+                <a
+                  href={`#${nav.id}`}
+                  className={`flex min-h-11 items-center font-mono font-medium text-[16px] ${
                     active === nav.title ? "text-accent" : "text-muted"
                   }`}
                   onClick={() => {
-                    setToggle(!toggle);
+                    setToggle(false);
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>./{nav.title.toLowerCase()}</a>
-                </li>
-              ))}
-              <li className="font-mono text-[14px] text-accent">
-                <a href={resume} target="_blank" rel="noreferrer">resume.pdf</a>
+                  ./{nav.title.toLowerCase()}
+                </a>
               </li>
-            </ul>
-          </div>
+            ))}
+            <li>
+              <a
+                href={resume}
+                target="_blank"
+                rel="noreferrer"
+                className="flex min-h-11 items-center font-mono text-[16px] text-accent"
+              >
+                resume.pdf
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
+      )}
     </nav>
   );
 };

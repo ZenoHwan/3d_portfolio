@@ -30,7 +30,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         )}
       </div>
 
-      <div className="relative w-full h-[200px] overflow-hidden border-b border-border">
+      <div className="relative w-full h-[180px] sm:h-[200px] overflow-hidden border-b border-border">
         <img
           src={image}
           alt={name}

@@ -9,7 +9,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 const ServiceCard = ({ index, title, icon }) => (
   <motion.div
     variants={fadeIn("right", "spring", index * 0.3, 0.6)}
-    className="tui-card tui-card-hover p-6 w-full xs:w-[240px] flex flex-col gap-4"
+    className="tui-card tui-card-hover p-6 w-full sm:w-[240px] flex flex-col gap-4"
   >
     <div className="flex items-center gap-3">
       <span className="text-accent text-[14px] font-mono">[{String(index + 1).padStart(2, "0")}]</span>
@@ -56,7 +56,7 @@ const About = () => {
         <p className="mt-3 text-text/90 text-[15px] leading-[28px]">
           Previously at <span className="text-info">Bjak</span> (motor
           insurance, motor loan) and <span className="text-info">Seagate</span>.
-          I care about clean systems, honest APIs, and code that survives.
+          I care about clean systems, APIs, and code that survives.
         </p>
       </motion.div>
 

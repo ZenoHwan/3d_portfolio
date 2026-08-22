@@ -15,13 +15,13 @@ const ExperienceCard = ({ experience, index }) => (
         className="w-10 h-10 object-contain shrink-0"
       />
       <div className="min-w-0 flex-1">
-        <div className="flex items-center gap-2 mb-2 text-[11px] text-muted uppercase tracking-widest">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-2 text-[11px] text-muted uppercase tracking-widest">
           <span className="text-accent">●</span>
           <span>commit {String(index + 1).padStart(3, "0")}</span>
           <span className="text-muted/60">·</span>
           <span>{experience.date}</span>
         </div>
-        <h3 className="text-text text-[20px] font-bold">{experience.title}</h3>
+        <h3 className="text-text text-[18px] sm:text-[20px] font-bold text-balance">{experience.title}</h3>
         <p className="text-accent text-[14px] font-semibold mt-1">
           @ {experience.company_name}
         </p>
@@ -46,7 +46,9 @@ const Experience = () => {
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>// 02_experience</p>
         <h2 className={`${styles.sectionHeadText} text-center mt-2 font-sans`}>
-          <span className="text-accent">&gt;</span> git log --experience
+          <span className="text-accent">&gt;</span>{" "}
+          <span className="sm:hidden">experience</span>
+          <span className="hidden sm:inline">git log --experience</span>
         </h2>
       </motion.div>
 

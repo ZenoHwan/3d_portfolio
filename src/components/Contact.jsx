@@ -52,10 +52,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
+    <div className="xl:mt-12 flex xl:flex-row flex-col gap-10 overflow-hidden">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] tui-card p-8 font-mono"
+        className="flex-[0.75] tui-card p-5 sm:p-8 font-mono"
       >
         <p className={styles.sectionSubText}>// 04_contact</p>
         <h3 className={`${styles.sectionHeadText} mt-2 font-sans`}>
@@ -77,7 +77,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="your name..."
-              className="bg-primary py-3 px-4 placeholder:text-muted text-text border border-border focus:border-accent outline-none font-mono text-[14px] transition-colors"
+              className="bg-primary py-3 px-4 placeholder:text-muted text-text border border-border focus:border-accent outline-none font-mono text-base sm:text-[14px] transition-colors"
             />
           </label>
           <label className="flex flex-col">
@@ -90,7 +90,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="your@email.com"
-              className="bg-primary py-3 px-4 placeholder:text-muted text-text border border-border focus:border-accent outline-none font-mono text-[14px] transition-colors"
+              className="bg-primary py-3 px-4 placeholder:text-muted text-text border border-border focus:border-accent outline-none font-mono text-base sm:text-[14px] transition-colors"
             />
           </label>
           <label className="flex flex-col">
@@ -103,14 +103,14 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="type your message..."
-              className="bg-primary py-3 px-4 placeholder:text-muted text-text border border-border focus:border-accent outline-none font-mono text-[14px] resize-none transition-colors"
+              className="bg-primary py-3 px-4 placeholder:text-muted text-text border border-border focus:border-accent outline-none font-mono text-base sm:text-[14px] resize-none transition-colors"
             />
           </label>
 
           <button
             type="submit"
             disabled={loading}
-            className="border border-accent text-accent hover:bg-accent hover:text-primary py-3 px-6 w-fit font-mono font-bold text-[14px] transition-colors disabled:opacity-50"
+            className="border border-accent text-accent hover:bg-accent hover:text-primary min-h-11 py-3 px-6 w-full sm:w-fit font-mono font-bold text-[14px] transition-colors disabled:opacity-50"
           >
             {loading ? "sending..." : "./send-message"}
           </button>
@@ -119,7 +119,7 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className="hidden md:block xl:flex-1 xl:h-auto md:h-[550px]"
       >
         <EarthCanvas />
       </motion.div>
