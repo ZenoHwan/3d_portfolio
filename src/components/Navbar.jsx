@@ -25,6 +25,7 @@ const Navbar = () => {
   }, [toggle]);
 
   return (
+    <>
     <nav
       className={`w-full flex items-center py-3 sm:py-4 fixed top-0 z-20 font-mono pt-[max(0.75rem,env(safe-area-inset-top))] transition-all duration-200 ${
         scrolled || toggle ? "bg-primary/90 backdrop-blur border-b border-border" : "bg-transparent"
@@ -90,8 +91,10 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+    </nav>
+      {/* ponytail: sibling of <nav>, not a child — the nav's backdrop-blur breaks compositing of fixed descendants */}
       {toggle && (
-        <div className="sm:hidden fixed inset-x-0 top-[calc(env(safe-area-inset-top)+3.25rem)] bottom-0 bg-primary/95 border-t border-border px-6 py-6 z-10">
+        <div className="sm:hidden fixed inset-x-0 top-[calc(env(safe-area-inset-top)+3.25rem)] bottom-0 bg-primary border-t border-border px-6 py-6 z-30">
           <ul className="list-none flex flex-col gap-1">
             {navLinks.map((nav) => (
               <li key={nav.id}>
@@ -122,7 +125,7 @@ const Navbar = () => {
           </ul>
         </div>
       )}
-    </nav>
+    </>
   );
 };
 
