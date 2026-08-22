@@ -6,19 +6,26 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
+const ServiceCard = ({ index, title, icon, desc, stack }) => (
   <motion.div
     variants={fadeIn("right", "spring", index * 0.3, 0.6)}
-    className="tui-card tui-card-hover p-6 w-full sm:w-[240px] flex flex-col gap-4"
+    className="tui-card tui-card-hover p-6 w-full sm:w-[360px] flex flex-col gap-4"
   >
     <div className="flex items-center gap-3">
       <span className="text-accent text-[14px] font-mono">[{String(index + 1).padStart(2, "0")}]</span>
       <span className="text-muted text-[11px] font-mono uppercase tracking-widest">module</span>
     </div>
-    <img src={icon} alt={title} className="w-12 h-12 object-contain opacity-80" />
-    <h3 className="text-text text-[18px] font-mono font-bold">{title}</h3>
-    <div className="mt-auto pt-4 border-t border-border text-muted text-[11px] font-mono">
-      → active
+    <div className="flex items-center gap-3">
+      <img src={icon} alt="" className="w-10 h-10 object-contain opacity-80" />
+      <h3 className="text-text text-[18px] font-mono font-bold">{title}</h3>
+    </div>
+    <p className="text-text/85 text-[14px] leading-[24px]">{desc}</p>
+    <div className="mt-auto pt-4 border-t border-border flex flex-wrap gap-x-2 gap-y-1 text-muted text-[12px] font-mono">
+      {stack.map((s) => (
+        <span key={s} className="border border-border px-2 py-0.5">
+          {s}
+        </span>
+      ))}
     </div>
   </motion.div>
 );

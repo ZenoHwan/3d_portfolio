@@ -39,8 +39,18 @@ export const navLinks = [
 ];
 
 const services = [
-  { title: "Frontend", icon: web },
-  { title: "Backend", icon: backend },
+  {
+    title: "Frontend",
+    icon: web,
+    desc: "Product UIs that stay fast as they grow — SSR/static sites, design-system components, charts over live market data.",
+    stack: ["TypeScript", "React", "Next.js", "Astro", "Tailwind"],
+  },
+  {
+    title: "Backend",
+    icon: backend,
+    desc: "APIs and services behind them — real-time price pipelines, account/billing, third-party integrations, caching that keeps p99 flat.",
+    stack: ["Node.js", "Go", "Fastify", "Express", "MariaDB", "Redis", "Docker", "AWS"],
+  },
 ];
 
 const technologies = [
