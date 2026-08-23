@@ -61,6 +61,11 @@ const About = () => {
           Astro, React, MariaDB, Redis, Docker, AWS.
         </p>
         <p className="mt-3 text-text/90 text-[15px] leading-[28px]">
+          For 18 months I built <span className="text-accent">Fuyoh</span> — a
+          Malaysian insurance aggregator, still live — across a Go backend, a
+          Playwright scraper service and a Next.js storefront.
+        </p>
+        <p className="mt-3 text-text/90 text-[15px] leading-[28px]">
           Previously at <span className="text-info">Bjak</span> (motor
           insurance, motor loan) and <span className="text-info">Seagate</span>.
           I care about clean systems, APIs, and code that survives.

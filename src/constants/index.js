@@ -30,6 +30,7 @@ import {
   anthonyLondon,
   coinranking,
   check4d,
+  fuyoh,
 } from "../assets";
 
 export const navLinks = [
@@ -110,6 +111,18 @@ const experiences = [
 ];
 
 const projects = [
+  {
+    name: "Fuyoh",
+    description:
+      "Malaysian motor and travel insurance aggregator. Core contributor for 18 months (Feb 2025 – Jul 2026) across four services: a Go/Gin backend integrating five insurers for quotes, policies and payments; a Playwright scraper service that recovers quotes when insurer portals return referred cases; a Next.js 14 storefront in EN/MS/ZH; and a Go microservice that renders policy PDFs. Still live — I have since handed it off.",
+    tags: [
+      { name: "go", color: "blue-text-gradient" },
+      { name: "nextjs", color: "green-text-gradient" },
+      { name: "playwright", color: "pink-text-gradient" },
+    ],
+    image: fuyoh,
+    source_code_link: "https://www.fuyoh.my/ms/",
+  },
   {
     name: "Check4DResult",
     description:
