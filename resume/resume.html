@@ -6,7 +6,7 @@
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    font: 8.9pt/1.26 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 8.9pt/1.23 "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #1a1d21;
     -webkit-print-color-adjust: exact;
   }
@@ -100,15 +100,25 @@
 
 <div class="entry">
   <div class="entry-head">
+    <span class="entry-title">Cardranking — Naruto &amp; Gundam TCG Dex</span>
+    <span class="entry-meta">Aug 2026 – Present</span>
+  </div>
+  <div class="entry-sub">Card catalogue and scanner apps for trading card games · in development</div>
+  <ul>
+    <li>Built the shared Go backend (Echo, GORM, PostgreSQL) for every game, and the Gundam app in Expo (React Native).</li>
+    <li>Built the card scanner: ML Kit reads the card number on the phone, and a MobileCLIP-S2 image-embedding service matches cards by their art when it can't.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
     <span class="entry-title">Fuyoh — <a href="https://www.fuyoh.my">fuyoh.my</a></span>
     <span class="entry-meta">Feb 2025 – Jul 2026</span>
   </div>
   <div class="entry-sub">Malaysian insurance aggregator</div>
   <ul>
-    <li>Built the Go/Gin backend on MongoDB and Redis, with integrations for Takaful Ikhlas, Allianz, Generali, Tokio Marine and Zurich covering quotes, policy issuance and payments (SenangPay, AhaPay). Added OpenTelemetry and Prometheus.</li>
-    <li>Built a Playwright scraper service in TypeScript that still gets a price when an insurer portal returns a referred case instead of a quote.</li>
-    <li>Built the Next.js 14 frontend (Redux Toolkit, next-intl) in English, Malay and Chinese for motor, travel, property and business quotes.</li>
-    <li>Wrote a Go service that renders policy and report PDFs from HTML templates with headless Chromium.</li>
+    <li>Built the Go/Gin backend on MongoDB and Redis, integrating five insurers (Allianz, Zurich, Generali and others) for quotes, policies and payments.</li>
+    <li>Built a Playwright scraper that gets a price when an insurer portal returns a referred case, and the Next.js frontend in English, Malay and Chinese.</li>
   </ul>
 </div>
 
