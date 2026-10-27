@@ -46,10 +46,10 @@
 
 <h2>Summary</h2>
 <p class="lead">
-  Full-stack engineer with 5+ years shipping production web products across crypto, insurtech and fintech.
-  Currently building crypto market-data infrastructure at Coinranking — real-time price pipelines,
-  microservices, account/billing, and LLM-powered content pipelines on the Claude API. Comfortable from the UI down to the container: TypeScript and Go
-  services, React/Next.js/Astro frontends, MariaDB/MongoDB/Redis, Docker on AWS.
+  Full-stack engineer with 5+ years of production work in crypto, insurance and fintech. At Coinranking I work
+  on the price pipeline, microservices, accounts and billing, and an LLM pipeline that writes coin content.
+  I mostly write TypeScript and Go, with React, Next.js and Astro on the frontend, MariaDB, MongoDB and Redis
+  for data, and Docker on AWS.
 </p>
 
 <h2>Experience</h2>
@@ -61,13 +61,13 @@
   </div>
   <div class="entry-sub">Remote · Crypto market data</div>
   <ul>
-    <li>Full-stack on Coinranking Hub, a production crypto market-data platform serving live prices and analytics.</li>
-    <li>Build and run microservices in Node.js/TypeScript and Go behind Fastify and Express APIs, backed by MariaDB and Redis.</li>
-    <li>Own account and billing end-to-end — plans, API-key issuance, usage metering and upgrade flows.</li>
-    <li>Built an LLM content pipeline in Go on the Claude Batch API that researches tokens with web search and returns structured descriptions, about-pages and tags — with output validation, truncated-response handling and guarded writes so AI-enriched records aren't overwritten; designed its prompts and tuned model, effort and token budgets for cost and quality.</li>
-    <li>Made the platform readable to LLMs and AI search: generated an llms.txt index and per-page markdown for the API docs, and added FAQPage structured data and SEO content across list pages.</li>
-    <li>Use AI coding agents (Claude Code, Codex) daily, backed by repo-level agent instructions and custom commands, to ship and review changes across the stack.</li>
-    <li>Ship customer-facing surfaces in Astro and React; containerised workloads on Docker/AWS.</li>
+    <li>Work across the stack on Coinranking Hub, which serves live crypto prices and market data.</li>
+    <li>Write and run Node.js/TypeScript and Go services on Fastify and Express, with MariaDB and Redis.</li>
+    <li>Own accounts and billing: plans, API keys, usage metering and upgrades.</li>
+    <li>Built a Go service that uses the Claude Batch API with web search to write coin descriptions, about pages and tags. It validates the output, recovers from truncated responses and protects AI-enriched records from later overwrites. Wrote the prompts and tuned model, effort and token limits to keep costs down.</li>
+    <li>Generated llms.txt and per-page markdown for the API docs, and added FAQ structured data and SEO copy to list pages.</li>
+    <li>Use Claude Code and Codex every day to write and review code.</li>
+    <li>Build frontend pages in Astro and React.</li>
   </ul>
 </div>
 
@@ -78,10 +78,10 @@
   </div>
   <div class="entry-sub">Selangor, Malaysia · Insurance &amp; lending</div>
   <ul>
-    <li>Bootstrapped Motor Loan from zero — architecture, data model, lender integrations and launch.</li>
-    <li>Shipped motor insurance and motor loan products on Next.js, NestJS, Node.js, Express, React and MongoDB.</li>
-    <li>Built and maintained Puppeteer scrapers that quote and purchase policies directly from insurer portals.</li>
-    <li>Implemented AI features for the loan product: payslip extraction, bank-statement parsing and IC fraud detection (Python, FastAPI).</li>
+    <li>Built Motor Loan from scratch: architecture, data model, lender integrations and launch.</li>
+    <li>Worked on the motor insurance and motor loan products (Next.js, NestJS, Express, React, MongoDB).</li>
+    <li>Wrote and maintained Puppeteer scrapers that get quotes and buy policies on insurer portals.</li>
+    <li>Built AI features for the loan product in Python/FastAPI: payslip extraction, bank statement parsing and IC fraud detection.</li>
   </ul>
 </div>
 
@@ -92,7 +92,7 @@
   </div>
   <div class="entry-sub">Penang, Malaysia · Access provision</div>
   <ul>
-    <li>Built and documented in-house access-provision tooling with Java, JSP, Servlets and SQL; delivered a feature letting new employees mirror an existing colleague's access profile.</li>
+    <li>Built and documented internal access-provisioning tools in Java (JSP, Servlets) and SQL, including a feature that copies a colleague's access to a new hire.</li>
   </ul>
 </div>
 
@@ -103,12 +103,12 @@
     <span class="entry-title">Fuyoh — <a href="https://www.fuyoh.my">fuyoh.my</a></span>
     <span class="entry-meta">Feb 2025 – Jul 2026</span>
   </div>
-  <div class="entry-sub">Malaysian insurance aggregator · core contributor across four services (18 months)</div>
+  <div class="entry-sub">Malaysian insurance aggregator · worked on four services</div>
   <ul>
-    <li>Built the Go/Gin backend on MongoDB and Redis, integrating Takaful Ikhlas, Allianz, Generali, Tokio Marine and Zurich for quotations, policy issuance and payments (SenangPay, AhaPay); instrumented with OpenTelemetry and Prometheus.</li>
-    <li>Built the headless scraper service (TypeScript, Playwright, Express) that recovers quotes when insurer portals return referred cases instead of a price — turning dead-end submissions into completed quotes.</li>
-    <li>Built the Next.js 14 frontend with Redux Toolkit and next-intl across EN/MS/ZH, covering motor, travel, property and business quote flows.</li>
-    <li>Wrote the Go microservice that renders policy and report PDFs from HTML templates via headless Chromium.</li>
+    <li>Built the Go/Gin backend on MongoDB and Redis, with integrations for Takaful Ikhlas, Allianz, Generali, Tokio Marine and Zurich covering quotes, policy issuance and payments (SenangPay, AhaPay). Added OpenTelemetry and Prometheus.</li>
+    <li>Built a Playwright scraper service in TypeScript that still gets a price when an insurer portal returns a referred case instead of a quote.</li>
+    <li>Built the Next.js 14 frontend (Redux Toolkit, next-intl) in English, Malay and Chinese for motor, travel, property and business quotes.</li>
+    <li>Wrote a Go service that renders policy and report PDFs from HTML templates with headless Chromium.</li>
   </ul>
 </div>
 
@@ -117,7 +117,7 @@
     <span class="entry-title">Check4DResult — <a href="https://www.check4dresult.com">check4dresult.com</a></span>
   </div>
   <ul>
-    <li>Live Malaysian 4D results for Magnum, Sports Toto and Da Ma Cai, auto-refreshing during draw windows.</li>
+    <li>Live 4D results for Magnum, Sports Toto and Da Ma Cai that refresh automatically during draws.</li>
   </ul>
 </div>
 
@@ -127,7 +127,7 @@
     <span class="entry-meta">deprecated</span>
   </div>
   <ul>
-    <li>Search engine over Web3 on-chain credentials by name and Ethereum address. Awarded USD 6,000 in grants from Aave, Near and Alchemy. Next.js, MongoDB, Prisma, Alchemy SDK.</li>
+    <li>Search engine for on-chain Web3 credentials by name or Ethereum address. Won USD 6,000 in grants from Aave, Near and Alchemy. Built with Next.js, MongoDB, Prisma and the Alchemy SDK.</li>
   </ul>
 </div>
 
@@ -137,7 +137,7 @@
   <dt>Backend</dt><dd>Node.js, Fastify, Express, NestJS, Gin, FastAPI</dd>
   <dt>Frontend</dt><dd>React, Next.js, Astro, Svelte, Tailwind, Redux Toolkit</dd>
   <dt>Data</dt><dd>MariaDB, MongoDB, PostgreSQL, Redis, Prisma</dd>
-  <dt>AI</dt><dd>Claude API (Batch, tool use, web search), prompt engineering, Claude Code, Codex</dd>
+  <dt>AI</dt><dd>Claude API (Batch, tool use, web search), Claude Code, Codex</dd>
   <dt>Infra</dt><dd>Docker, AWS, OpenTelemetry, Prometheus, Playwright, Puppeteer</dd>
 </dl>
 

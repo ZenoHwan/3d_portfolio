@@ -81,8 +81,8 @@ const experiences = [
     points: [
       "Full-stack on Coinranking Hub — production crypto market-data platform.",
       "Microservices, real-time prices, and account/billing systems.",
-      "Built an LLM content pipeline on the Claude Batch API that researches tokens and writes structured descriptions, about-pages and tags.",
-      "Made the platform AI-search ready with llms.txt, per-page markdown docs and FAQ structured data; ship daily with Claude Code and Codex.",
+      "Built a Go service that uses the Claude Batch API with web search to write coin descriptions, about pages and tags.",
+      "Generated llms.txt and markdown versions of the API docs, and use Claude Code and Codex every day.",
       "Node.js · TypeScript · Go · Astro · React · Fastify · Express · MariaDB · Redis · Docker · AWS",
     ],
   },
