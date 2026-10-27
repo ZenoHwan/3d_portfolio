@@ -31,6 +31,7 @@ import {
   coinranking,
   check4d,
   fuyoh,
+  cardranking,
 } from "../assets";
 
 export const navLinks = [
@@ -113,6 +114,17 @@ const experiences = [
 ];
 
 const projects = [
+  {
+    name: "Cardranking",
+    description:
+      "Card catalogue and scanner apps for the Naruto and Gundam trading card games, in development. Built the shared Go backend (Echo, GORM, PostgreSQL) that serves every game, the Gundam app in Expo, and the card scanner: ML Kit reads the card number on the phone, and a MobileCLIP-S2 image-embedding service matches cards by their art when it can't.",
+    tags: [
+      { name: "go", color: "blue-text-gradient" },
+      { name: "react-native", color: "green-text-gradient" },
+      { name: "postgresql", color: "pink-text-gradient" },
+    ],
+    image: cardranking,
+  },
   {
     name: "Fuyoh",
     description:

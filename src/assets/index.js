@@ -38,6 +38,7 @@ import carrent from "./carrent.png";
 import idential from "./idential.png";
 import check4d from "./check4d.png";
 import fuyoh from "./fuyoh.png";
+import cardranking from "./cardranking.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
@@ -81,4 +82,5 @@ export {
   website,
   anthonyLondon,
   coinranking,
+  cardranking,
 };
