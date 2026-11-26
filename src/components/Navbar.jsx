@@ -62,9 +62,12 @@ const Navbar = () => {
               } hover:text-accent text-[14px] font-medium cursor-pointer transition-colors`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>./{nav.title.toLowerCase()}</a>
+              <a href={`/#${nav.id}`}>./{nav.title.toLowerCase()}</a>
             </li>
           ))}
+          <li className="text-muted hover:text-accent text-[14px] font-medium transition-colors">
+            <Link to="/blog" onClick={() => setActive("")}>./blog</Link>
+          </li>
           <a
             href={resume}
             target="_blank"
@@ -99,7 +102,7 @@ const Navbar = () => {
             {navLinks.map((nav) => (
               <li key={nav.id}>
                 <a
-                  href={`#${nav.id}`}
+                  href={`/#${nav.id}`}
                   className={`flex min-h-11 items-center font-mono font-medium text-[16px] ${
                     active === nav.title ? "text-accent" : "text-muted"
                   }`}
@@ -112,6 +115,18 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
+            <li>
+              <Link
+                to="/blog"
+                className="flex min-h-11 items-center font-mono font-medium text-[16px] text-muted"
+                onClick={() => {
+                  setToggle(false);
+                  setActive("");
+                }}
+              >
+                ./blog
+              </Link>
+            </li>
             <li>
               <a
                 href={resume}

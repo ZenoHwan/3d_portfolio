@@ -4,9 +4,22 @@
     {
       "name": "portfolio",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 5173,
       "autoPort": true
+    },
+    {
+      "name": "portfolio-full",
+      "runtimeExecutable": "vercel",
+      "runtimeArgs": [
+        "dev",
+        "--listen",
+        "3000"
+      ],
+      "port": 3000
     }
   ]
 }
