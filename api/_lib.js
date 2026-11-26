@@ -30,7 +30,7 @@ export const renderMarkdown = (md) => marked.parse(md ?? "");
 const SESSION_DAYS = 7;
 const MIN_PASSWORD = 12;
 const password = () => process.env.ADMIN_PASSWORD || "";
-const configured = () => password().length >= MIN_PASSWORD;
+export const configured = () => password().length >= MIN_PASSWORD;
 const digest = (s) => crypto.createHash("sha256").update(String(s)).digest();
 const safeEqual = (a, b) => crypto.timingSafeEqual(digest(a), digest(b));
 const sign = (exp) => crypto.createHmac("sha256", password()).update(`session.${exp}`).digest("hex");
